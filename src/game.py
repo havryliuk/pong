@@ -1,7 +1,6 @@
-from ball import Ball
-from bar import Bar
 from field import Field
 from score import Score
+from printer import Printer
 
 
 class Game:
@@ -9,9 +8,10 @@ class Game:
     def __init__(self, field, score):
         self.field = field
         self.score = score
+        self.printer = Printer()
 
     def play(self):
-        pass
+        self.printer.print_field(self.field)
 
 
 def start():
